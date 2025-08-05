@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    Components
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Component id</th>
+          <th>Component Category</th>
+          <th>Component Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data %}
+        <tr>
+          <td>{{ item.component_id }}</td>
+          <td>{{ item.component_category }}</td>
+          <td>{{ item.component_description }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
+

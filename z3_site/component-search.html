@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <H1>Component Search</H1>
+  </head>
+  <body>
+    <form action="{% url 'component-search' %}" method="get">
+        <input name="q" type="text" placeholder="Search...">
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Component id</th>
+          <th>Component Category</th>
+          <th>Component Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in object_list %}
+        <tr>
+          <td>{{ item.component_id }}</td>
+          <td>{{ item.component_category }}</td>
+          <td>{{ item.component_description }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
+
